@@ -277,7 +277,7 @@ Below is a list with a brief description of the problems. Workarounds are listed
 * **OpenOCD for ST-LINK**: No known problems with the RTEgetData utility if the OpenOCD GDB server is properly configured. See the OpenOCD on ST-LINK example below.
 
 * **OpenOCD for JTAG on ESP32**: <br>
-The GDB server stops the code execution in the embedded system as soon as RTEgetData connects to it via the TCP/IP protocol. No workaround has been found yet.
+The ESP-IDF GDB server stops the code execution in the embedded system as soon as RTEgetData connects to it via the TCP/IP protocol. No workaround has been found yet. A serial communication can be used instead - see [instructions for the ESP32](https://github.com/RTEdbg/RTElib/tree/master/Portable/Timer/ESP32/Readme.md).
 
 ||
 |:--------------|
@@ -453,7 +453,7 @@ Example of data transfer to the host using the PE Micro GDB server.
 
 The code execution stops as soon as the RTEgetData utility connects to the GDB server (even before the data transfer starts). A workaround has not yet been found. Instructions for transferring data to the host using the JTAG ESP32 debug probe will be published when testing is complete and the ESP32 RTEdbg demo is released.
 
-**Note:** Data transfer over a serial channel can be used instead of the GDB server to transfer the logged data - see [Data Transfer to a Host via a Serial Channel](#data-transfer-to-a-host-via-a-serial-channel).
+**Note:** Data transfer over a serial channel can be used instead of the GDB server to transfer the logged data - see [Data Transfer to a Host via a Serial Channel](#data-transfer-to-a-host-via-a-serial-channel). See also [instructions for the ESP32](https://github.com/RTEdbg/RTElib/tree/master/Portable/Timer/ESP32/Readme.md).
 
 <br>
 
