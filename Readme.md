@@ -250,7 +250,7 @@ The long timestamp working variable must also be cleared if there are long times
 4. Start the code execution with the debugger. Data logging starts immediately if the filter value set with the -filter=value argument is non-zero, otherwise the firmware must set the filter after a software trigger.
 5. Use RTEgetData utility commands (keyboard shortcuts) to transfer data from embedded system, change message filter, etc.
 
-**Note:** See how to use this in the *\"c:/RTEdbg/Demo/STM32L053/TEST RTEgetData/Testing without rte_init\"* RTEdbg demo folder (included in the RTEdbg distribution ZIP file).
+**Note:** See how to use this in the demo [Testing without rte_init()](https://github.com/RTEdbg/RTEdbgDemo/tree/master/STM32L053/TEST%20RTEgetData/Testing%20without%20rte_init).
 
 <br>
 
