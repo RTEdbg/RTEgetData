@@ -294,7 +294,7 @@ There are no known problems using J-Link with RTEgetData.
 
 Example batch file for data transfer using a J-Link debug probe (using default GDB server port 2331).
 ```
-"c:\RTEdbg\UTIL\RTEgetData" 2331 2000C00 2028 -delay=50 -bin="..\Test HV.bin"
+RTEgetData 2331 2000C00 2028 -delay=50 -bin="..\Test HV.bin"
 ```
 Batch file to start the J-Link GDB Server. The CPU core (Cortex-M4) is not stopped or reset. See also [J-Link GDB Server](https://wiki.segger.com/J-Link_GDB_Server). Set the parameters according to your needs and hardware limitations.
 ```
@@ -334,7 +334,7 @@ Transfer data from the embedded system and start decoding if data transfer was s
 
 **Note:** The RTEdbg manual describes how to transfer data to the host using the command line application for ST-LINK (using default GDB server port 61234).
 ``` 
-"c:\RTEdbg\UTIL\RTEgetData" 61234 0x24000000 0
+RTEgetData 61234 0x24000000 0
 IF %ERRORLEVEL% EQU 0 goto decode
 pause
 goto exit:
@@ -363,7 +363,7 @@ Check the description of **[Using GDB as a non-intrusive memory inspector](https
 Data transfer to the host using the OpenOCD GDB serve (using default GDB server port 3333) - see below.
 The OpenOCD server must be started first (it can also be started automatically in the IDE when you start testing code).
 ```
-"c:\RTEdbg\RTEgetData\RTEgetData.exe" 3333 24000000 0
+RTEgetData.exe 3333 24000000 0
 ```
 In the case of the ST-LINK debug probe, start the ST-LINK server before starting the OpenOCD GDB server. <br>
 **Note:** The ST-LINK server only needs to be started if "st-link backend tcp" is enabled in the OpenOCD.cfg file.
@@ -446,7 +446,7 @@ pegdbserver_console.exe -startserver -device=NXP_S32K3xx_S32K312 -interface=USBM
 ```
 Example of data transfer to the host using the PE Micro GDB server.
 ```
-"c:\RTEdbg\UTIL\RTEgetData\RTEgetData.exe" 7224 0x04000000 0
+RTEgetData.exe 7224 0x04000000 0
 ```
 
 ### ESP32 JTAG Debugging

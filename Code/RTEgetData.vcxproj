@@ -133,7 +133,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "x64\Release\RTEgetData.exe" c:\RTEdbg\UTIL\RTEgetData\ /y &gt;nul</Command>
+      <Command>xcopy "x64\Release\RTEgetData.exe" c:\RTEdbg\ /y &gt;nul</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
